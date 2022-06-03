@@ -12,7 +12,7 @@ app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// "file" on multerSetup.single is the key assigned from form-data
+// "file" on multerSetup.single parameter is the key assigned from form-data
 
 app.post("/upload", multerSetup.single("file"), async (req, res) => {
     try {
